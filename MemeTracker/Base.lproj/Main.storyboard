@@ -20,29 +20,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" rowHeight="90" id="G2p-fi-74O" customClass="MemeTableViewCell" customModule="MemeTracker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableViewCell" rowHeight="90" id="G2p-fi-74O" customClass="MemeTableViewCell" customModule="MemeTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2p-fi-74O" id="isI-f7-Kuf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-CE-98R">
-                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-CE-98R">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="88"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="Lzg-T5-lKX"/>
+                                            </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-gm-J1Q" customClass="RatingControl" customModule="MemeTracker" customModuleProvider="target">
-                                            <rect key="frame" x="98" y="37" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="85U-ef-MHO">
+                                            <rect key="frame" x="97" y="12.5" width="252" height="64.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-Pd-Rzp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="252" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-gm-J1Q" customClass="RatingControl" customModule="MemeTracker" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="20.5" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-Pd-Rzp">
-                                            <rect key="frame" x="98" y="8" width="269" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ofH-CE-98R" firstAttribute="leading" secondItem="isI-f7-Kuf" secondAttribute="leading" id="UBC-2q-ugX"/>
+                                        <constraint firstItem="85U-ef-MHO" firstAttribute="centerY" secondItem="isI-f7-Kuf" secondAttribute="centerY" id="Uhl-5i-ZVR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="85U-ef-MHO" secondAttribute="trailing" constant="18" id="fSH-6m-hnD"/>
+                                        <constraint firstItem="ofH-CE-98R" firstAttribute="top" secondItem="isI-f7-Kuf" secondAttribute="top" id="kKo-xO-edA"/>
+                                        <constraint firstItem="85U-ef-MHO" firstAttribute="centerY" secondItem="ofH-CE-98R" secondAttribute="centerY" id="ylA-Tc-tWX"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="85U-ef-MHO"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="85U-ef-MHO"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="AtV-Pd-Rzp" id="3gE-jV-yvw"/>
@@ -67,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hz8-at-cdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="121.88905547226388"/>
+            <point key="canvasLocation" x="300" y="120.98950524737631"/>
         </scene>
         <!--New Meme-->
         <scene sceneID="tne-QT-ifu">

@@ -104,7 +104,7 @@ class MemeTableViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
         switch (segue.identifier ?? "") {
         case "AddItem":
-            os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+            os_log("Adding a new meme.", log: OSLog.default, type: .debug)
         case "ShowDetail":
             guard let memeDetailViewController = segue.destination as? MemeViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
