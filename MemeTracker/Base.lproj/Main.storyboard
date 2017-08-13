@@ -24,38 +24,36 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2p-fi-74O" id="isI-f7-Kuf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ofH-CE-98R">
-                                            <rect key="frame" x="0.0" y="0.0" width="90" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="89"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="90" id="Lzg-T5-lKX"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="85U-ef-MHO">
-                                            <rect key="frame" x="97" y="13" width="265" height="63.5"/>
+                                            <rect key="frame" x="98" y="12.5" width="252" height="64.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-Pd-Rzp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="265" height="13.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="252" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-gm-J1Q" customClass="RatingControl" customModule="MemeTracker" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="13.5" width="265" height="50"/>
+                                                    <rect key="frame" x="0.0" y="20.5" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ofH-CE-98R" firstAttribute="leading" secondItem="isI-f7-Kuf" secondAttribute="leading" id="UBC-2q-ugX"/>
-                                        <constraint firstItem="85U-ef-MHO" firstAttribute="centerY" secondItem="isI-f7-Kuf" secondAttribute="centerY" id="Uhl-5i-ZVR"/>
-                                        <constraint firstItem="85U-ef-MHO" firstAttribute="top" secondItem="isI-f7-Kuf" secondAttribute="topMargin" constant="5" id="iBA-PB-ZEW"/>
-                                        <constraint firstItem="ofH-CE-98R" firstAttribute="top" secondItem="isI-f7-Kuf" secondAttribute="top" id="kKo-xO-edA"/>
-                                        <constraint firstItem="ofH-CE-98R" firstAttribute="leading" secondItem="isI-f7-Kuf" secondAttribute="leading" id="r7f-FM-nb2"/>
-                                        <constraint firstItem="85U-ef-MHO" firstAttribute="centerY" secondItem="ofH-CE-98R" secondAttribute="centerY" id="ylA-Tc-tWX"/>
-                                        <constraint firstItem="85U-ef-MHO" firstAttribute="leading" secondItem="ofH-CE-98R" secondAttribute="trailing" constant="7" id="z1G-bJ-TxT"/>
+                                        <constraint firstItem="ofH-CE-98R" firstAttribute="centerY" secondItem="isI-f7-Kuf" secondAttribute="centerY" id="C7r-BN-00o"/>
+                                        <constraint firstItem="85U-ef-MHO" firstAttribute="leading" secondItem="ofH-CE-98R" secondAttribute="trailing" constant="8" symbolic="YES" id="G7X-sO-TRl"/>
+                                        <constraint firstItem="ofH-CE-98R" firstAttribute="leading" secondItem="isI-f7-Kuf" secondAttribute="leading" id="dGI-7w-Tfu"/>
+                                        <constraint firstItem="ofH-CE-98R" firstAttribute="top" secondItem="isI-f7-Kuf" secondAttribute="top" id="tEB-Xs-WG1"/>
+                                        <constraint firstItem="85U-ef-MHO" firstAttribute="centerY" secondItem="ofH-CE-98R" secondAttribute="centerY" id="zdF-ab-GcM"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
@@ -91,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hz8-at-cdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="120.98950524737631"/>
+            <point key="canvasLocation" x="299.5" y="120.5"/>
         </scene>
         <!--New Meme-->
         <scene sceneID="tne-QT-ifu">
