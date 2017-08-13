@@ -18,9 +18,6 @@ class MemeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Use the edit button item provided by the table view controller.
-        navigationItem.leftBarButtonItem = editButtonItem
-        
         // Load any saved memes, otherwise load sample data.
         if let savedMemes = loadMemes() {
             memes += savedMemes
